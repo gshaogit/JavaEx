@@ -1,0 +1,12 @@
+import com.test.drools.liveCycle.HelloWorld;
+import function com.test.drools.liveCycle.DroolsUtil.log;
+
+rule "Hello World"
+when
+  hw: HelloWorld ()
+then  
+  log(drools, "Hello World and Welcome using Drools");
+  hw.setMessage(hw.getMessage() + " and Welcome using Drools");
+end
+
+
